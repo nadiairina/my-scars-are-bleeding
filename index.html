@@ -21,6 +21,10 @@ a{color:inherit}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,6vw,96px);align-items:center}
 .hero h1{font-weight:400;font-size:clamp(2.6rem,6.4vw,5.6rem);line-height:1;letter-spacing:-.02em;text-wrap:balance}
 .hero h1 em{font-style:italic;color:var(--blood)}
+.gd{position:relative;display:inline-block}
+.gd::after{content:"";position:absolute;left:var(--gx,46%);top:var(--gy,calc(86% + .155em));width:.15em;height:.218em;margin-left:-.075em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 30'%3E%3Cpath fill='%23C23048' d='M10 0C10.6 6 20 14 20 19.5a10 10 0 0 1-20 0C0 14 9.4 6 10 0z'/%3E%3C/svg%3E") center/100% 100% no-repeat;transform-origin:50% 0;transform:scale(0);opacity:0;pointer-events:none;animation:gota 5.2s linear 1.4s infinite}
+@keyframes gota{0%{transform:translateY(0) scale(0);opacity:0;animation-timing-function:ease-out}6%{opacity:1}28%{transform:translateY(0) scale(1);animation-timing-function:ease-in-out}42%{transform:translateY(.02em) scale(.92,1.25);animation-timing-function:cubic-bezier(.5,0,1,.6)}66%{transform:translateY(2.6em) scale(.8,1.5);opacity:1}70%,100%{transform:translateY(2.9em) scale(.8,1.5);opacity:0}}
+@media(prefers-reduced-motion:reduce){.gd::after{animation:none;transform:scale(1);opacity:1}}
 .by{margin-top:22px;font-size:1.15rem;letter-spacing:.2em;text-transform:uppercase}
 .lede{margin-top:30px;max-width:34ch;font-size:1.25rem}
 .acts{margin-top:36px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
@@ -158,7 +162,7 @@ a{color:inherit}
 <nav class="nav" aria-label="Main"><a href="#top">Nadia Irina</a><div class="links"><a href="#book">The book</a><a href="#read">Read it</a><a href="#poems">The poems</a><a class="cta" href="#contact">Manuscript</a></div></nav>
 <main id="top">
 <section class="hero"><div class="wrap">
-<div><h1>My Scars<br>Are <em>Bleeding</em></h1><p class="by">Poems by Nadia Irina</p>
+<div><h1>My Scars<br>Are <em>Bleedin<span class="gd">g</span></em></h1><p class="by">Poems by Nadia Irina</p>
 <p class="lede">A collection of 76 poems in English, in four parts, from the first spark to the shadow that stays.</p>
 <div class="acts"><a class="btn" href="#contact">Request the manuscript</a><a class="quiet" href="#poems">Read a few lines</a></div></div>
 <figure class="cover"><div class="scene play" id="scene" role="img" aria-label="The book My Scars Are Bleeding turning to show every side, then opening and turning its pages to five poems before closing again">
@@ -181,7 +185,7 @@ a{color:inherit}
 <blockquote class="auth edi"><p>“An honest, disarming voice, writing from a place of total exposure.”</p><footer>From an editorial analysis of the manuscript</footer></blockquote>
 <div class="facts"><div><b>76</b><span>poems</span></div><div><b>4</b><span>parts</span></div><div><b>EN</b><span>written in English</span></div></div></div>
 </div></section>
-<section class="where" id="read"><div class="wrap"><div><h2>Where to read it</h2><p>The ebook is out now on Kobo. The Amazon edition is in review.</p></div><div class="shops"><a class="shop" href="https://www.kobo.com/ww/en/search?query=My%20Scars%20Are%20Bleeding%20Nadia%20Irina" rel="noopener"><b>Kobo</b><span>Ebook · available now</span></a><div class="shop soon"><b>Amazon</b><span>In review</span></div></div></div></section>
+<section class="where" id="read"><div class="wrap"><div><h2>Where to read it</h2><p>The ebook is out now on Kobo and Amazon.</p></div><div class="shops"><a class="shop" href="https://www.kobo.com/ww/en/search?query=My%20Scars%20Are%20Bleeding%20Nadia%20Irina" rel="noopener"><b>Kobo</b><span>Ebook · available now</span></a><a class="shop" href="https://www.amazon.com/dp/B0HRB4R3WY" rel="noopener"><b>Amazon</b><span>Ebook · available now</span></a></div></div></section>
 <section class="poems" id="poems" data-on="charm"><div class="wrap"><div class="ph"><h2>The poems</h2><p>Four parts. Choose one to read a few lines and see its titles.</p></div><div class="tabs" role="tablist" aria-label="Parts of the book"><button class="tab" role="tab" type="button" id="t-charm" data-k="charm" aria-selected="true" aria-controls="p-charm" tabindex="0"><small>Part I</small><b>The Charm</b></button><button class="tab" role="tab" type="button" id="t-fire" data-k="fire" aria-selected="false" aria-controls="p-fire" tabindex="-1"><small>Part II</small><b>The Fire</b></button><button class="tab" role="tab" type="button" id="t-void" data-k="void" aria-selected="false" aria-controls="p-void" tabindex="-1"><small>Part III</small><b>The Void</b></button><button class="tab" role="tab" type="button" id="t-shadow" data-k="shadow" aria-selected="false" aria-controls="p-shadow" tabindex="-1"><small>Part IV</small><b>The Shadow</b></button></div><div class="panels"><div class="pn on" role="tabpanel" id="p-charm" aria-labelledby="t-charm">
 <p class="pt2">Love arrives without being asked.</p>
 <div class="p-body"><blockquote class="ex on"><p><span class="ln" style="--i:0">I wasn’t looking for you,</span><span class="ln" style="--i:1">But you came anyway,</span><span class="gap"></span><span class="ln" style="--i:2">You knocked down my walls,</span><span class="ln" style="--i:3">And planted flowers on my flaws.</span></p><footer>from “The Unexpected”</footer></blockquote>
@@ -204,6 +208,14 @@ a{color:inherit}
 </main>
 <footer class="foot"><div class="wrap">© Nadia Irina. All rights reserved. No part of these poems may be reproduced without written permission.</div></footer>
 <script>
+/* blood drop: hang from the real lowest ink of the g, whatever font the browser uses */
+(function(){var g=document.querySelector('.gd');if(!g)return;
+function place(){try{var cs=getComputedStyle(g),c=document.createElement('canvas').getContext('2d');c.font=cs.fontStyle+' '+cs.fontWeight+' '+cs.fontSize+' '+cs.fontFamily;
+var m=c.measureText('g'),mk=document.createElement('i');mk.style.cssText='display:inline-block;width:0;height:0';g.appendChild(mk);
+var gr=g.getBoundingClientRect(),br=mk.getBoundingClientRect();g.removeChild(mk);
+var base=br.bottom-gr.top,ink=base+m.actualBoundingBoxDescent,l=-m.actualBoundingBoxLeft,r=m.actualBoundingBoxRight;
+g.style.setProperty('--gy',(ink-parseFloat(cs.fontSize)*.03)+'px');g.style.setProperty('--gx',(l+(r-l)*.48)+'px');}catch(e){}}
+place();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);addEventListener('resize',place);})();
 (function(){
 var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches,th=document.getElementById('thread'),d=document;
 function onS(){var h=d.documentElement.scrollHeight-innerHeight,p=h>0?Math.min(1,Math.max(0,scrollY/h)):0;th.style.height=(p*100)+'%';}
